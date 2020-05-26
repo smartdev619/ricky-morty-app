@@ -1,0 +1,23 @@
+<form (ngSubmit)="searchCharacters()" #searchForm="ngForm">
+  <div
+    class="form-group"
+    [ngClass]="{
+      'has-error': searchForm.submitted && !searchText
+    }"
+  >
+    <label for="searchText">Search by name</label>
+    <input
+      type="text"
+      id="searchText"
+      name="searchText"
+      [(ngModel)]="searchText"
+      class="form-control"
+      placeholder="Enter name"
+      required
+    />
+  </div>
+  <button class="btn btn-default">Search</button>
+  <p class="error" *ngIf="searchForm.submitted && !searchText">
+    Please enter a search term.
+  </p>
+</form>

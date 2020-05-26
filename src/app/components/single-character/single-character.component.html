@@ -1,0 +1,35 @@
+<div class="tile">
+  <app-thumbnail [character]="character"></app-thumbnail>
+  <div class="feature-container">
+    <div class="row">
+      <div class="col-xs-3 feature-name">STATUS</div>
+      <div class="col-xs-9 text-right feature-value">
+        {{ character.status }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 feature-name">SPECIES</div>
+      <div class="col-xs-9 text-right feature-value">
+        {{ character.species }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 feature-name">GENDER</div>
+      <div class="col-xs-9 text-right feature-value">
+        {{ character.gender }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 feature-name">ORIGIN</div>
+      <div class="col-xs-9 text-right feature-value">
+        {{ character.origin.name }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 feature-name">LAST LOCATION</div>
+      <div class="col-xs-9 text-right feature-value">
+        {{ character.location.name }}
+      </div>
+    </div>
+  </div>
+</div>

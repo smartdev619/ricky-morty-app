@@ -1,0 +1,45 @@
+<h2>Filters</h2>
+<form>
+  <div class="border">
+    <h4>Species</h4>
+    <div *ngFor="let item of getAttributes().species" class="checkbox">
+      <label>
+        <input
+          type="checkbox"
+          [value]="item"
+          (change)="setChecked(item.value, 'species', $event.target.checked)"
+          [checked]="item.checked"
+        />
+        {{ item.value }}
+      </label>
+    </div>
+  </div>
+  <div class="border">
+    <h4>Gender</h4>
+    <div *ngFor="let item of getAttributes().genders" class="checkbox">
+      <label>
+        <input
+          type="checkbox"
+          [value]="item"
+          (change)="setChecked(item.value, 'genders', $event.target.checked)"
+          [checked]="item.checked"
+        />
+        {{ item.value }}
+      </label>
+    </div>
+  </div>
+  <div class="border">
+    <h4>Origin</h4>
+    <div *ngFor="let item of getAttributes().origins" class="checkbox">
+      <label>
+        <input
+          type="checkbox"
+          [value]="item"
+          (change)="setChecked(item.value, 'origins', $event.target.checked)"
+          [checked]="item.checked"
+        />
+        {{ item.value }}
+      </label>
+    </div>
+  </div>
+</form>
